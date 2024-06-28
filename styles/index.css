@@ -55,6 +55,8 @@
   filter: blur(0.1em);
   opacity: 0.5;
   transition: opacity 0.3s ease-out;
+  box-shadow: 0 0 0.1em 0.1em rgb(85, 81, 81);
+
 }
 .btn1::after {
   content: "";
@@ -73,6 +75,7 @@
 .btn1:hover::before {
   opacity: 1;
   animation: rotate 30s linear infinite;
+  box-shadow: 0 0 0.2em 0.1em rgb(65, 62, 62);
 }
 .btn1:active::after {
   background: transparent;
@@ -95,7 +98,7 @@
 .btn2 {
   border: none;
   background: none;
-  font-size: 4rem;
+  font-size: 3.2rem;
   color: #40a2d8;
   border: 0.2em solid #40a2d8;
   padding: 0.2em 0.5em;
@@ -104,6 +107,7 @@
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  letter-spacing: 0.15em;
 }
 
 .btn2:hover {
@@ -138,4 +142,78 @@
   background: white;
   color: #40a2d8;
   transition: background 0.2s;
+}
+
+
+/* -------------------------------------------------------------------------------btn3 ---------------------------------------------------------------------------- */
+
+
+.btn3 {
+  border: none;
+  background: none;
+  font-size: 3.2rem;
+  padding: 0.3em 0.4em;
+  border: 0.2em solid black;
+  border-radius: 0.3em;
+  position: relative;
+  background-color: rgb(63, 210, 255);
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+  box-shadow: 0 0.1em 0.1em 0 rgba(42, 124, 146, 0.8);
+  letter-spacing: 0.1em;
+}
+
+.btn3:hover {
+  box-shadow: 0 0.1em 0.2em 0 rgb(6, 49, 63);
+}
+.btn3:active {
+  background: black;
+}
+
+.btn3::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -420%;
+  left: -25%;
+  width: 150%;
+  height: 450%;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 45%;
+  animation: wave 10s ease infinite;
+  transition: top 0.3s ease;
+
+}
+
+.btn3::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -395%;
+  left: -25%;
+  width: 150%;
+  height: 400%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40%;
+  animation: wave 8s linear infinite;
+  transition: top 0.3s ease;
+}
+
+.btn3:hover::after {
+  top: -500%;
+}
+.btn3:hover::before {
+  top: -500%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
