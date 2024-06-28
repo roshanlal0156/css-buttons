@@ -56,7 +56,6 @@
   opacity: 0.5;
   transition: opacity 0.3s ease-out;
   box-shadow: 0 0 0.1em 0.1em rgb(85, 81, 81);
-
 }
 .btn1::after {
   content: "";
@@ -112,7 +111,7 @@
 
 .btn2:hover {
   box-shadow: 0 0 0.25em 0.125em #4089b1;
-  background: #40A2D8;
+  background: #40a2d8;
   color: white;
   opacity: 1;
 }
@@ -127,8 +126,8 @@
   right: 10%;
   transform: perspective(1em) rotateX(45deg);
   background: linear-gradient(to bottom, #40a2d8, transparent);
-  filter: blur(.2em);
-  box-shadow: 0 0 0.2em 0 #40A2D8;
+  filter: blur(0.2em);
+  box-shadow: 0 0 0.2em 0 #40a2d8;
   opacity: 0.6;
   border-radius: 50%;
   transition: opacity 0.3s ease;
@@ -144,9 +143,7 @@
   transition: background 0.2s;
 }
 
-
 /* -------------------------------------------------------------------------------btn3 ---------------------------------------------------------------------------- */
-
 
 .btn3 {
   border: none;
@@ -174,7 +171,7 @@
 }
 
 .btn3::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: -420%;
@@ -185,11 +182,10 @@
   border-radius: 45%;
   animation: wave 10s ease infinite;
   transition: top 0.3s ease;
-
 }
 
 .btn3::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: -395%;
@@ -215,5 +211,122 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------------------------------------------------------btn3 ---------------------------------------------------------------------------- */
+
+.btn4 {
+  border: none;
+  background: none;
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;
+  border: 0.2em solid #604cc3;
+  border-radius: 0.6em;
+  padding: 0.2em 0.6em;
+  color: white;
+  background-color: #604cc3;
+  position: relative;
+}
+
+.btn4animation::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 150%;
+  height: 100%;
+  left: -25%;
+  top: -80%;
+  background-image: radial-gradient(
+      transparent 50%,
+      #604cc3 50%,
+      #604cc3 60%,
+      transparent 60%
+    ),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%);
+    
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+    0% 0%;
+    background-repeat: no-repeat;
+    animation: btneffact 0.4s linear;
+}
+
+.btn4animation::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  z-index: -1;
+  left: -25%;
+  bottom: -80%;
+  background-image: radial-gradient(
+      transparent 50%,
+      #604cc3 50%,
+      #604cc3 60%,
+      transparent 60%
+    ),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(transparent 50%, #604cc3 50%, #604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%),
+    radial-gradient(#604cc3 60%, transparent 60%);
+  background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+    0% 0%;
+  background-repeat: no-repeat;
+  animation: btneffact2 0.4s linear;
+}
+
+@keyframes btneffact {
+  0% {
+    background-position: 25% 100%, 30% 100%, 35% 100%, 40% 100%, 45% 100%,
+      50% 100%, 55% 100%, 60% 100%, 65% 100%, 70% 100%, 75% 100%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+      0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 12% 80%, 20% 80%, 30% 65%, 35% 60%, 42% 55%, 50% 50%,
+      57% 55%, 65% 60%, 77% 65%, 80% 90%, 87% 95%;
+    background-size: 5% 10%, 5% 10%, 3% 10%, 2% 5%, 5% 13%, 3% 10%, 3% 12%,
+      5% 15%, 5% 12%, 2% 10%, 3% 15%;
+  }
+  100% {
+    background-position: 0% 90%, 10% 60%, 20% 30%, 30% 20%, 40% 10%, 50% 0%,
+      60% 10%, 70% 20%, 80% 30%, 90% 80%, 100% 90%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+      0% 0%, 0% 0%;
+  }
+}
+@keyframes btneffact2 {
+  0% {
+    background-position: 25% 0%, 30% 0%, 35% 0%, 40% 0%, 45% 0%, 50% 0%, 55% 0%,
+      60% 0%, 65% 0%, 70% 0%, 75% 0%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+      0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 12% 5%, 20% 15%, 30% 22%, 35% 27%, 42% 35%, 50% 40%,
+      57% 32%, 65% 27%, 72% 22%, 80% 17%, 87% 7%;
+    background-size: 5% 10%, 5% 10%, 3% 10%, 2% 5%, 5% 13%, 3% 10%, 3% 12%,
+      5% 15%, 5% 12%, 2% 10%, 3% 15%;
+  }
+  100% {
+    background-position: 0% 10%, 10% 30%, 20% 45%, 30% 55%, 40% 70%, 50% 80%,
+      60% 65%, 70% 55%, 80% 45%, 90% 35%, 100% 15%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+      0% 0%, 0% 0%;
   }
 }

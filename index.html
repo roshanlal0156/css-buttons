@@ -8,6 +8,10 @@
 </head>
 <body>
     <div class="container">
+        <button class="btn4">kileek</button>
+    </div>
+
+    <div class="container">
         <button class="btn3">Hoverever</button>
     </div>
 
@@ -20,4 +24,15 @@
     </div>
 
 </body>
+<script>
+    btn4 = document.querySelector('.btn4');
+    btn4.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('hi');
+        btn4.classList.add('btn4animation');
+        setTimeout(() => {
+            btn4.classList.remove('btn4animation');
+        }, 400);
+    });
+</script>
 </html>
